@@ -4,7 +4,7 @@ library(shiny)
 shinyServer(function(input, output) {
   
   output$sum <- renderPrint({
-    search(input$exampleTextarea)
+    search(input$exampleTextarea, tfidf.matrix, docs, F)
   })
 
 })
